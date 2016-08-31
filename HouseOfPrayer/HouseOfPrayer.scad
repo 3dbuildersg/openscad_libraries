@@ -1,0 +1,1 @@
+linear_extrude(6) text("HouseOfPrayer",font="Lucida Sans:style=Bold Italic");
