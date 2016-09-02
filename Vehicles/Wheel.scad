@@ -1,3 +1,11 @@
+// Filename : Wheel.scad
+// Version  : v1.0
+// Modified : 30 Aug 2016
+// Author   : Jason Yeo
+//////////////////////////////////////
+// A simple wheel.
+//////////////////////////////////////
+
 $fn=200;
 wheel(8, 20);
 
