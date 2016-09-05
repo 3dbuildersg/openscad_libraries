@@ -1,5 +1,6 @@
 // Filename : Plane.scad
 // Version  : v1.0
+// Category : Transportation
 // Modified : 5 Sept 2016
 // Author   : Jason Yeo
 //////////////////////////////////////
