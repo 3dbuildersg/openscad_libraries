@@ -1,4 +1,11 @@
-
+// Filename : bridge.scad
+// Version  : v1.0
+// Category : Buildings
+// Modified : 4 Sept 2016
+// Author   : Jason Yeo
+//////////////////////////////////////
+// Train. (Derived from Car.scad)
+//////////////////////////////////////
 
 bridge();
 
