@@ -1,4 +1,4 @@
-BumpyNameTag("Jason Yeo Boon Teck", 12, 0.55, 1.2);
+BumpyNameTag("Faith Ong", 12, 0.55, 1.2);
 
 module BumpyNameTag(name, fontsize, spread, jump)
 {
@@ -20,5 +20,5 @@ module BumpyNameTag(name, fontsize, spread, jump)
                 linear_extrude(5) text(name[i],size=fontsize,font =fonttype, true, $fn=80);
         }
     }
-    translate([0,-2,0])cube([fontsize*len(name)*spread+2, fontsize+2, 2]);
+    //translate([0,-2,0])cube([fontsize*len(name)*spread+2, fontsize+2, 2]);
 }

@@ -1,8 +1,20 @@
-head();
-torso();
-arms();
-hips();
-legs();
+// Filename : Robot.scad
+// Version  : v1.0
+// Modified : 3 Sept 2016
+// Author   : Jason Yeo
+//////////////////////////////////////
+// Basic car frame. (Base class)
+//////////////////////////////////////
+robot();
+
+module robot()
+{
+    head();
+    torso();
+    arms();
+    hips();
+    legs();
+}
 
 //////////////////////////////////////////////////////////
 // HEAD
