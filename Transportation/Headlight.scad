@@ -13,7 +13,7 @@ headlight();
 module headlight(diameter=20)
 {  
     //translate([0,0,-diameter/4])
-    difference()
+    //difference()
     {
         union()
         {
