@@ -5,21 +5,14 @@
 //////////////////////////////////////
 // Basic headlight
 //////////////////////////////////////
-
+use <..\Utilities\Shapes.scad>
 $fn=50;
 
 headlight();
 
-module headlight(diameter=20)
-{  
-    //translate([0,0,-diameter/4])
-    //difference()
-    {
-        union()
-        {
-            sphere(d=diameter,true);
-            cylinder(diameter/2,diameter/2,diameter/2,true);
-        }
-        translate([0,0,-diameter/2])cube([diameter,diameter,diameter],true);
-    }
+module headlight(d1=20)
+{
+	ring(d1,d1*0.2);
+	dome(d1);
 }
+

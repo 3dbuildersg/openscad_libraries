@@ -16,7 +16,7 @@ module wheel(width=10, diameter=30)
 }
 module spokes(width, diameter, noOfSpokes=5)
 {
-    union()
+    color("Silver")union()
     {
         cylinder(width*.5,d1=diameter*.2,d2=diameter*.2,center=true);
         delta=360/noOfSpokes;
@@ -35,10 +35,16 @@ module spoke(width, length)
 
 module wheel_rim(width, outer_diameter)
 {    
-    difference()
-    {
-        cylinder(width,d1=outer_diameter,d2=outer_diameter,center=true);
-        translate([0,0,0]) cylinder(width+2,d1=outer_diameter*.8,d2=outer_diameter*.8,center=true);    
-    }
+//    difference()
+//    {
+//        cylinder(width,d1=outer_diameter,d2=outer_diameter,center=true);
+//        translate([0,0,0]) cylinder(width+2,d1=outer_diameter*.8,d2=outer_diameter*.8,center=true);    
+//    }
+	color("Black") translate([0,0,-width/2])
+	linear_extrude(height = width, twist = 0, slices = 160) {
+		difference() {
+		      circle(d=outer_diameter);
+		      circle(d=outer_diameter*0.8);
+  		}
+	}
 }
-
