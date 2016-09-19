@@ -1,43 +1,61 @@
-// Filename : Plane.scad
-// Version  : v1.0
-// Category : Transportation
-// Modified : 5 Sept 2016
-// Author   : Jason Yeo
-//////////////////////////////////////
-// Plane
-//////////////////////////////////////
+// Filename 		: Plane.scad
+// Main Module   	: Plane 
+// Sub-module	: NONE
+// Version  		: v1.0
+// Category 		: Transportation
+// Modified 		: 19 Sept 2016
+// Author   		: Jason Yeo
+///////////////////////////////////////////////////////////////////////////////
+// Refer to drawing for dimension parameters.
+// These allow flexibilities in variant train's design.
+///////////////////////////////////////////////////////////////////////////////
+
+use <SimpleBody.scad>
+use <SimpleWings.scad>
+use <SimpleTail.scad>
 
 $fn=150;
+
+// Wings parameters
+w1=30;
+w2=50;
+wingspan=170;
+
+// Body parameters
+body_length=150;
+body_diameter=15;
+
+// Tail parameters
+t1=20;
+t2=30;
+tail_height=30;
+/////////////////////////////////////////////
+
 plane();
 
-module plane(body_length=100, wing_span=90)
+module plane()
 {
-	body(body_length);
-	translate([-14,0,0])wings(wing_span);
-	translate([-30,0,10])tail();
+	Body(body_length , body_diameter);
+	translate([-w2/2,+body_diameter-5,0]) Wing(w1=w1,w2=w2,wingspan=wingspan,left=true);
+	translate([-w2/2,-body_diameter+5,0]) Wing(w1=w1,w2=w2,wingspan=wingspan,left=false);
+	translate([-body_length/4,0,10]) Tail(t1, t2, tail_height);
 }
 
-module body(length=100)
-{
-	translate([0,0,0])rotate([0,90,0])cylinder(h=length*.8, d1=15, d2=18, center=true);
-	translate([length/2,0,0])rotate([0,90,0])cylinder(h=length*.2, d1=18, d2=0, center=true);
-}
 
-module wings(span)
-{
-	difference()
-	{
-		cube([span/3,span,5], true);
-		translate([25,+20,0])rotate([0,-15,+20])cube([span/3,span,15], true);
-		translate([25,-20,0])rotate([0,-15,-20])cube([span/3,span,15], true);
-	}
-}
 
-module tail()
-{
-	difference()
-	{
-		cube([10,3,20], true);
-		translate([8,0,5])rotate([0,-20,0])cube([10,3,20], true);
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

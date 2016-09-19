@@ -9,7 +9,7 @@
 $fn=200;
 wheel(8, 20);
 
-module wheel(width=10, diameter=30)
+module wheel(width=10, diameter=20)
 {   
     wheel_rim(width, diameter);
     spokes(width, diameter);    

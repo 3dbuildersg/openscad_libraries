@@ -18,16 +18,16 @@ use <SimpleBase.scad>
 
 // Cabin parameters
 l1 = 70;   	// Length of Cabin.
-b  = 30;   	// Breadth of Cabin.
-h1 = 50;		// Height of Cabin.
+b  = 40;   	// Breadth of Cabin.
+h1 = 70;		// Height of Cabin.
 t1 = 3;		// Thickness of Cabin wall.
 
 // Engine parameters.
-l2 = 100;	// Length of Engine.
+l2 = 70;	// Length of Engine.
 h2 = b;		// Breadth of Engine.
 
 // Wheel parameters
-d  = 15;		// Diameter of wheel.
+d  = 10;		// Diameter of wheel.
 
 // Instantiate train object.
 Train();  	// Train (default)
